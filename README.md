@@ -4,7 +4,6 @@
 
 该项目是一个综合信息反演建模平台，包含后端 Python 和前端 Vue2 构建的界面，用户可以通过前端界面上传数据，支持excel和csv格式，运行模型并查看结果。
 ![项目截图](images/综合信息反演建模平台.png)
-<iframe width="560" height="315" src="images/综合信息反演建模平台.mp4" frameborder="0" allowfullscreen></iframe>
 
 ## 目录结构
 
