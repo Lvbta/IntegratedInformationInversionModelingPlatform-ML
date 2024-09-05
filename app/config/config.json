@@ -1,0 +1,75 @@
+{
+  "models": {
+    "随机森林": {
+      "class": "RandomForestRegressor",
+      "params": {
+        "n_estimators": "range(10, 50, 1)",
+        "max_depth": "range(1, 10, 1)",
+        "min_samples_split": "range(2, 30, 1)"
+      }
+    },
+    "支持向量机": {
+      "class": "SVR",
+      "params": {
+        "C": "loguniform(0.01, 100)",
+        "epsilon": "uniform(0.01, 0.1)",
+        "kernel": "choice(['linear', 'poly', 'rbf', 'sigmoid'])"
+      }
+    },
+    "线性回归": {
+      "class": "LinearRegression",
+      "params": {
+      }
+    },
+    "梯度提升": {
+      "class": "GradientBoostingRegressor",
+      "params": {
+        "n_estimators": "range(10, 50, 1)",
+        "learning_rate": "uniform(0.01, 0.3)",
+        "max_depth": "range(3, 16, 1)"
+      }
+    },
+    "决策树回归": {
+      "class": "DecisionTreeRegressor",
+      "params": {
+        "max_depth": "range(1, 21, 1)",
+        "min_samples_split": "range(2, 21, 1)"
+      }
+    },
+    "K近邻回归": {
+      "class": "KNeighborsRegressor",
+      "params": {
+        "n_neighbors": "range(1, 21, 1)",
+        "weights": "choice(['uniform', 'distance'])"
+      }
+    },
+    "多层感知器回归": {
+      "class": "MLPRegressor",
+      "params": {
+        "hidden_layer_sizes": "choice([(50,), (100,), (50, 50), (100, 100)])",
+        "activation": "choice(['identity', 'logistic', 'tanh', 'relu'])",
+        "alpha": "loguniform(1e-5, 1e-1)"
+      }
+    },
+    "岭回归": {
+      "class": "Ridge",
+      "params": {
+        "alpha": "loguniform(1e-3, 1e3)"
+      }
+    },
+    "拉索回归": {
+      "class": "Lasso",
+      "params": {
+        "alpha": "loguniform(1e-3, 1e3)"
+      }
+    },
+    "LSTM": {
+      "class": "LSTM",
+      "params": {
+        "units": "choice([50, 100, 150])",
+        "dropout": "uniform(0, 0.5)",
+        "epochs": "range(10, 101, 10)"
+      }
+    }
+  }
+}
